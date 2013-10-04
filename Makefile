@@ -1,7 +1,5 @@
 .PHONY: js-env pages
 
-REPO=dreamerplate
-
 # default build task
 build:
 	make js-env
@@ -26,16 +24,16 @@ js-env:
 pages:
 	git pull --rebase
 	make js-env
-	mkdir -p ~/tmp/$(REPO)/js-env
-	cp -rf js-env ~/tmp/$(REPO)/js-env
-	cp .gitignore ~/tmp/$(REPO)
-	cp base.html ~/tmp/$(REPO)
+	mkdir -p ~/tmp/dreamerplate
+	cp -rf js-env ~/tmp/dreamerplate
+	cp .gitignore ~/tmp/dreamerplate
+	cp base.html ~/tmp/dreamerplate
 	git checkout gh-pages
 	mkdir -p js-env
 	rm -rf js-env
-	cp -rf ~/tmp/$(REPO)/* ./
+	cp -rf ~/tmp/dreamerplate/* ./
 	git add .
 	git commit -m 'automatic dreamplate generator'
 	git push
 	git checkout master
-	rm -r ~/tmp/$(REPO)
+	rm -r ~/tmp/dreamerplate
