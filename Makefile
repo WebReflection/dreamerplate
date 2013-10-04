@@ -32,7 +32,7 @@ pages:
 	cp base.html ~/tmp/$(REPO)
 	git checkout gh-pages
 	mkdir -p js-env
-	rm -rf js-env/*
+	rm -rf js-env
 	cp -rf ~/tmp/$(REPO)/* ./
 	git add .
 	git commit -m 'automatic dreamplate generator'
