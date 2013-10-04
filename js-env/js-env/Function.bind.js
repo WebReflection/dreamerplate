@@ -1,0 +1,1 @@
+(function(F,A,b){b in F||(F[b]=function(c){var f=this,a=A.call(arguments,1);return function(){return f.apply(c,a.concat(A.call(arguments)))}})}(Function.prototype,Array.prototype.slice,'bind'));
