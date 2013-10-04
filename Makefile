@@ -26,16 +26,15 @@ js-env:
 pages:
 	git pull --rebase
 	make js-env
-	mkdir -p ~/tmp
-	mkdir -p ~/tmp/$(REPO)
-	cp -rf js-env ~/tmp/$(REPO)
+	mkdir -p ~/tmp/$(REPO)/js-env
+	cp -rf js-env ~/tmp/$(REPO)/js-env
+	cp .gitignore ~/tmp/$(REPO)
 	cp base.html ~/tmp/$(REPO)
 	git checkout gh-pages
 	mkdir -p js-env
 	rm -rf js-env/*
-	cp -rf ~/tmp/$(REPO) js-env
-	mv js-env/base.html ./base.html
-	git add js-env
+	cp -rf ~/tmp/$(REPO) ./
+	git add .
 	git commit -m 'automatic dreamplate generator'
 	git push
 	git checkout master
