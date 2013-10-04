@@ -10,6 +10,7 @@ js-env:
 	rm js-env/*
 	cp excanvas.js js-env/excanvas.js
 	cp ie8/build/ie8.js js-env/ie8.js
+	cp html5shiv.js js-env/html5shiv.js
 	cp timers.js js-env/timers.js
 	cp dom4/build/dom4.js js-env/dom4.js
 	cp eddy/build/eddy.dom.js js-env/eddy.js
