@@ -1,6 +1,6 @@
 .PHONY: js-env pages
 
-REPO=dreamplate
+REPO=dreamerplate
 
 # default build task
 build:
