@@ -1,0 +1,1 @@
+(function(F,A,b){b in F||(F[b]=function(){return this.replace(A,'')})}(String.prototype,/^\s+|\s+$/g,'trim'));
