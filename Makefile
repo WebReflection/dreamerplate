@@ -1,4 +1,6 @@
-.PHONY: js-env
+.PHONY: js-env pages
+
+REPO=dreamplate
 
 # default build task
 build:
@@ -19,3 +21,22 @@ js-env:
 	cp es5-shim/es5-sham.min.js js-env/es5-sham.js
 	cp Function.prototype.bind.js js-env/Function.bind.js
 	cp String.prototype.trim.js js-env/String.trim.js
+
+# create the reamplate page
+pages:
+	git pull --rebase
+	make js-env
+	mkdir -p ~/tmp
+	mkdir -p ~/tmp/$(REPO)
+	cp -rf js-env ~/tmp/$(REPO)
+	cp base.html ~/tmp/$(REPO)
+	git checkout gh-pages
+	mkdir -p js-env
+	rm -rf js-env/*
+	cp -rf ~/tmp/$(REPO) js-env
+	mv js-env/base.html ./base.html
+	git add js-env
+	git commit -m 'automatic dreamplate generator'
+	git push
+	git checkout master
+	rm -r ~/tmp/$(REPO)
