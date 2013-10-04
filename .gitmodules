@@ -1,0 +1,18 @@
+[submodule "ie8"]
+	path = ie8
+	url = git@github.com:WebReflection/ie8.git
+[submodule "dom4"]
+	path = dom4
+	url = git@github.com:WebReflection/dom4.git
+[submodule "eddy"]
+	path = eddy
+	url = git@github.com:WebReflection/eddy.git
+[submodule "es5-shim"]
+	path = es5-shim
+	url = git@github.com:kriskowal/es5-shim.git
+[submodule "es6-shim"]
+	path = es6-shim
+	url = git@github.com:paulmillr/es6-shim.git
+[submodule "JSON-js"]
+	path = JSON-js
+	url = git@github.com:douglascrockford/JSON-js.git
